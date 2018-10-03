@@ -19,5 +19,8 @@ end
 def find_the_cheese(arr)
   cheese_types = ["cheddar", "gouda", "camembert"]
   arr.find do |item|
-    arr.any
+    cheese_types.any? do |cheese|
+      cheese == item
+    end
+  end
 end
